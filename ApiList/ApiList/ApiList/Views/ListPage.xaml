@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApiList.Views.ListPage"
+             xmlns:local="clr-namespace:ApiList.Models"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <Label Text="Api List" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="Black" />
+            <ListView x:Name="ApiList" BackgroundColor="White" ItemsSource="{Binding Items}"  ItemSelected="ApiList_ItemSelected" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="White" BorderColor="Black" Padding="0">
+                                <StackLayout Margin="5">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="UserId:" TextColor="DarkGray" FontAttributes="Bold" HorizontalOptions="Start"/>
+                                        <Label Text="{Binding UserId}" TextColor="Gray" FontAttributes="Bold" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Id:" TextColor="DarkGray" FontAttributes="Bold" HorizontalOptions="Start"/>
+                                        <Label Text="{Binding Id}" TextColor="Gray" FontAttributes="Bold" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Title " TextColor="DarkGray" FontAttributes="Bold" HorizontalTextAlignment="Start"/>
+                                        <Label Text="{Binding Title}"  TextColor="Gray"  />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Completed:" TextColor="DarkGray" FontAttributes="Bold" HorizontalOptions="Start"/>
+                                        <Label Text="{Binding Completed}"  TextColor="Gray" HorizontalOptions="Start"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    

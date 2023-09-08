@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApiList.Views.ItemDetailPage"
+             Title="Items Detail"
+             BackgroundColor="Silver"
+             NavigationPage.HasNavigationBar="False">
+
+    <Frame BackgroundColor="White" BorderColor="DimGray"   Margin="10" Padding="0" HasShadow="True">
+        <StackLayout>
+            <Label Text="Details:" TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                    <Label Text="UserId" TextColor="DarkGray" FontAttributes="Bold" FontSize="20" />
+                    <Label Text="{Binding UserId}" TextColor="Gray" FontAttributes="Bold" Margin="0,5,0,0" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                    <Label Text="Id" TextColor="DarkGray" FontAttributes="Bold" FontSize="20"/>
+                    <Label Text="{Binding Id}" TextColor="Gray" FontAttributes="Bold" Margin="0,5,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                    <Label Text="Completed" TextColor="DarkGray" FontAttributes="Bold" FontSize="20" HorizontalOptions="Start"/>
+                    <Label Text="{Binding Completed}" TextColor="Gray"  Margin="0,5,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                    <Label Text="Title" TextColor="DarkGray" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="{Binding Title}" TextColor="Gray"  Margin="0,5,0,0"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</ContentPage>
